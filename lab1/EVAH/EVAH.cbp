@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="EVAH" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/EVAH" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/EVAH" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="AD_BPMN.h" />
+		<Unit filename="AD_Basica.h" />
+		<Unit filename="AD_UML.h" />
+		<Unit filename="Arista.h" />
+		<Unit filename="AristaD.h" />
+		<Unit filename="AristaND.h" />
+		<Unit filename="Buscador.h" />
+		<Unit filename="CSV_Loader.h" />
+		<Unit filename="CSV_Saver.h" />
+		<Unit filename="EditorGrafo.h" />
+		<Unit filename="Especificacion.h" />
+		<Unit filename="Especificacion_O.h" />
+		<Unit filename="Especificacion_Y.h" />
+		<Unit filename="Filtro.h" />
+		<Unit filename="Grafo.h" />
+		<Unit filename="GrafoBPMN.h" />
+		<Unit filename="GrafoBasico.h" />
+		<Unit filename="GrafoLoader.h" />
+		<Unit filename="GrafoSaver.h" />
+		<Unit filename="GrafoUML.h" />
+		<Unit filename="GraphML_Loader.h" />
+		<Unit filename="GraphML_Saver.h" />
+		<Unit filename="ND_BPMN.h" />
+		<Unit filename="ND_Basico.h" />
+		<Unit filename="ND_UML.h" />
+		<Unit filename="Neo4J_Loader.h" />
+		<Unit filename="Neo4J_Saver.h" />
+		<Unit filename="Nodo.h" />
+		<Unit filename="PaqueteUML.h" />
+		<Unit filename="Relacional_Loader.h" />
+		<Unit filename="Relacional_Saver.h" />
+		<Unit filename="Seleccionador.h" />
+		<Unit filename="TipoGrafo.h" />
+		<Unit filename="include/AD_BPMN.h" />
+		<Unit filename="include/AD_Basica.h" />
+		<Unit filename="include/AD_UML.h" />
+		<Unit filename="include/Arista.h" />
+		<Unit filename="include/AristaD.h" />
+		<Unit filename="include/AristaND.h" />
+		<Unit filename="include/Buscador.h" />
+		<Unit filename="include/CSV_Loader.h" />
+		<Unit filename="include/CSV_Saver.h" />
+		<Unit filename="include/Clase.h" />
+		<Unit filename="include/Diagrama.h" />
+		<Unit filename="include/EditorGrafo.h" />
+		<Unit filename="include/Especificacion.h" />
+		<Unit filename="include/Especificacion_O.h" />
+		<Unit filename="include/Especificacion_Y.h" />
+		<Unit filename="include/Filtro.h" />
+		<Unit filename="include/Grafo.h" />
+		<Unit filename="include/GrafoBPMN.h" />
+		<Unit filename="include/GrafoBasico.h" />
+		<Unit filename="include/GrafoLoader.h" />
+		<Unit filename="include/GrafoSaver.h" />
+		<Unit filename="include/GrafoUML.h" />
+		<Unit filename="include/GraphML_Loader.h" />
+		<Unit filename="include/GraphML_Saver.h" />
+		<Unit filename="include/ND_BPMN.h" />
+		<Unit filename="include/ND_Basico.h" />
+		<Unit filename="include/ND_UML.h" />
+		<Unit filename="include/Neo4J_Loader.h" />
+		<Unit filename="include/Neo4J_Saver.h" />
+		<Unit filename="include/Nodo.h" />
+		<Unit filename="include/PaqueteUML.h" />
+		<Unit filename="include/Relacion.h" />
+		<Unit filename="include/Relacional_Loader.h" />
+		<Unit filename="include/Relacional_Saver.h" />
+		<Unit filename="include/Seleccionador.h" />
+		<Unit filename="include/TipoGrafo.h" />
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
