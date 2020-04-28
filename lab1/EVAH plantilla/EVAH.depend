@@ -1,0 +1,130 @@
+# depslib dependency file v1.0
+1588044401 source:c:\users\sebastian\documents\github\labsdiseno\lab1\evah\main.cpp
+	<iostream>
+	"GrafoUML.h"
+	"GrafoBPMN.h"
+	"GrafoBasico.h"
+	"EditorGrafo.h"
+	"ObjetoGenericoUML.h"
+	"Seleccionador.h"
+	"Clase.h"
+	"Diagrama.h"
+	"Relacion.h"
+	"PaqueteUML.h"
+
+1587432280 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\grafouml.h
+	"Grafo.h"
+	"TipoGrafo.h"
+
+1587432195 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\grafo.h
+	<vector>
+	"Nodo.h"
+
+1587432497 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\nodo.h
+
+1587431324 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\tipografo.h
+	"Grafo.h"
+
+1587432537 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\grafobpmn.h
+	"Grafo.h"
+	"TipoGrafo.h"
+
+1587432210 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\grafobasico.h
+	"Grafo.h"
+	"TipoGrafo.h"
+
+1587432177 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\editorgrafo.h
+	"TipoGrafo.h"
+
+1588041093 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\objetogenericouml.h
+	<iostream>
+	"ND_UML.h"
+
+1587432416 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\nd_uml.h
+	"Nodo.h"
+
+1588037680 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\seleccionador.h
+	"ObjetoGenericoUML.h"
+
+1588041046 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\clase.h
+	<ObjetoGenericoUML.h>
+
+1588042071 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\diagrama.h
+	"ObjetoGenericoUML.h"
+
+1587963521 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\relacion.h
+	"Clase.h"
+
+1588044683 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\paqueteuml.h
+	"ObjetoGenericoUML.h"
+
+1588117875 source:c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\main.cpp
+	<iostream>
+	"GrafoBPMN.h"
+	"GrafoBasico.h"
+	"EditorGrafo.h"
+	"ObjetoGenericoUML.h"
+	"Seleccionador.h"
+	"Clase.h"
+	"Diagrama.h"
+	"Relacion.h"
+	"PaqueteUML.h"
+	"include/GrafoUML.h"
+	"include/GrafoBPMN.h"
+	"include/GrafoBasico.h"
+	"include/EditorGrafo.h"
+	"include/ObjetoGenericoUML.h"
+	"include/Seleccionador.h"
+	"include/Clase.h"
+	"include/Diagrama.h"
+	"include/Relacion.h"
+	"include/PaqueteUML.h"
+
+1587432537 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\grafobpmn.h
+	"Grafo.h"
+	"TipoGrafo.h"
+
+1587432195 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\grafo.h
+	<vector>
+	"Nodo.h"
+
+1587432497 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\nodo.h
+
+1587431324 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\tipografo.h
+	"Grafo.h"
+
+1587432210 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\grafobasico.h
+	"Grafo.h"
+	"TipoGrafo.h"
+
+1587432177 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\editorgrafo.h
+	"TipoGrafo.h"
+
+1588116174 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\objetogenericouml.h
+	<iostream>
+	"ND_UML.h"
+	<typeinfo>
+
+1587432416 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\nd_uml.h
+	"Nodo.h"
+
+1588117598 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\seleccionador.h
+
+1588114945 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\clase.h
+	"ObjetoGenericoUML.h"
+	"Relacion.h"
+
+1588115882 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\relacion.h
+	"Clase.h"
+
+1588116785 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\diagrama.h
+	"ObjetoGenericoUML.h"
+	"PaqueteUML.h"
+
+1588117607 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\paqueteuml.h
+	"ObjetoGenericoUML.h"
+
+1587432280 c:\users\sebastian\documents\github\labsdiseno\lab1\evah plantilla\include\grafouml.h
+	"Grafo.h"
+	"TipoGrafo.h"
+
