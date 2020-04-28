@@ -8,16 +8,15 @@ class Diagrama: public ObjetoGenericoUML
 {
     public:
         using ObjetoGenericoUML::ObjetoGenericoUML;
-        //Diagrama() {}
         virtual ~Diagrama() {}
 
         vector<Clase*> Getclases() { return clases; }
         void Setclases(vector<Clase*> val) { clases = val; }
 
         //indica que el diagrama esta compuesto por otro objeto uml
-        void conectar(ObjetoGenericoUML* mi_clase)
+        void conectar(ObjetoGenericoUML* conexion)
         {
-            cout <<"el objeto " << mi_clase->Getnombre()<<" ahora esta en el diagrama " << this->Getnombre()<<endl;
+            cout <<"El objeto " << conexion->Getnombre()<<" ahora esta en el diagrama " << this->Getnombre()<<endl;
         }
 
     protected:

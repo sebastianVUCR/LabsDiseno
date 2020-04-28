@@ -1,15 +1,12 @@
 #ifndef CLASE_H
 #define CLASE_H
 
-#include <ObjetoGenericoUML.h>
-class Relacion;
+#include "ObjetoGenericoUML.h"
+#include "Relacion.h"
 
 class Clase : public ObjetoGenericoUML
 {
     public:
-        /*
-        Clase(string nombre){this->Setnombre(nombre);}
-        */
         using ObjetoGenericoUML::ObjetoGenericoUML;
 
         //crear una relacion entre dos clases, por ejemplo relacion de agregacion o composicion
@@ -24,9 +21,11 @@ class Clase : public ObjetoGenericoUML
         }
 
         //agrega la relacion al vector para la clase que la crea
-        void conectar(Relacion*)
+        void conectar(ObjetoGenericoUML* conexion)
         {
-            cout<<"Se agrego una relacion a la lista de relaciones en la clase "<<this->Getnombre()<<endl;
+            Relacion* relacion = (Relacion*)conexion;
+            relacion->Gettipo();
+            cout << "Se agrego una relacion a la lista de relaciones en la clase "<<this->Getnombre()<<endl;
         }
         void conectar(){}
         virtual ~Clase() {}

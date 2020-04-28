@@ -8,13 +8,13 @@ using namespace std;
 class ObjetoGenericoUML: ND_UML
 {
     public:
-
         ObjetoGenericoUML(string nuevo_nombre)
         {
             this->Setnombre(nuevo_nombre);
         }
         virtual ~ObjetoGenericoUML() {}
 
+        virtual void conectar(ObjetoGenericoUML* conexion) = 0;
         string Getnombre() { return nombre; }
         void Setnombre(string val) { nombre = val; }
         string Geticono() { return icono; }
@@ -25,27 +25,27 @@ class ObjetoGenericoUML: ND_UML
         //corta un objeto grafico uml
         void cortar()
         {
-            cout<<"El objeto "<<this->Getnombre()<<endl;
+            cout<<"El objeto "<<this->Getnombre() << " se corto" << endl;
         }
         //pega un objeto grafico uml
         void pegar()
         {
-            cout<<"El objeto "<<this->Getnombre()<<endl;
+            cout<<"El objeto "<<this->Getnombre() << " se pego" << endl;
         }
         //elimina un objeto grafico uml
         void eliminar()
         {
-            cout<<"El objeto "<<this->Getnombre()<<endl;
+            cout<<"El objeto "<<this->Getnombre() << " se elimino" << endl;
         }
         //reducir un objeto grafico uml
         void reducir()
         {
-            cout<<"El objeto "<<this->Getnombre()<<endl;
+            cout<<"El objeto "<<this->Getnombre() << " se redujo" << endl;
         }
         //dibujar un objeto grafico uml
         void dibujar()
         {
-            cout<<"El objeto "<<this->Getnombre()<<endl;
+            cout<<"El objeto "<<this->Getnombre() << " se dibujo" << endl;
         }
 
         ObjetoGenericoUML* seleccionar()

@@ -3,6 +3,7 @@
 
 #include"Clase.h"
 
+class Clase;
 class Relacion
 {
     public:
@@ -15,7 +16,7 @@ class Relacion
     protected:
 
     private:
-        string tipo;
+        string tipo = "hola";
         pair<Clase*,Clase*>clases;
         pair<int,int>multiplicidad;
 };

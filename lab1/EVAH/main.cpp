@@ -1,17 +1,29 @@
 #include <iostream>
 using namespace std;
 
-#include "GrafoUML.h"
+/*#include "GrafoUML.h"
 #include "GrafoBPMN.h"
 #include "GrafoBasico.h"
 #include "EditorGrafo.h"
 
-#include"ObjetoGenericoUML.h"
-#include"Seleccionador.h"
-#include"Clase.h"
-#include"Diagrama.h"
-#include"Relacion.h"
-#include"PaqueteUML.h"
+#include "ObjetoGenericoUML.h"
+#include "Seleccionador.h"
+#include "Clase.h"
+#include "Diagrama.h"
+#include "Relacion.h"
+#include "PaqueteUML.h"*/
+
+#include "include/GrafoUML.h"
+#include "include/GrafoBPMN.h"
+#include "include/GrafoBasico.h"
+#include "include/EditorGrafo.h"
+
+#include "include/ObjetoGenericoUML.h"
+#include "include/Seleccionador.h"
+#include "include/Clase.h"
+#include "include/Diagrama.h"
+#include "include/Relacion.h"
+#include "include/PaqueteUML.h"
 
 
 int main()
@@ -28,27 +40,27 @@ int main()
 
 	//prueba clase y relacion
 
-	Clase clase = Clase(" 1 ");
+	Clase clase = Clase("Clase1");
 	clase.dibujar();
 	clase.reducir();
 	clase.cortar();
 	clase.eliminar();
 	clase.pegar();
 
-	Clase clase2 = Clase(" 2 ");
+	Clase clase2 = Clase("Clase2");
 
 	clase.crearRelacion(&clase2,1,5);
 	clase.borrarRelacion(&clase2);
 
 	Relacion relacion = Relacion(&clase,&clase2,1,5);
 
-	clase.conectar(&relacion);
+	clase.conectar((ObjetoGenericoUML*)&relacion);
 
 	//prueba diagrama
 
 	cout<<endl;
 
-    Diagrama diagrama = Diagrama(" 1 ");
+    Diagrama diagrama = Diagrama("1");
 	diagrama.dibujar();
 	diagrama.reducir();
 	diagrama.cortar();
@@ -58,18 +70,6 @@ int main()
 
 	//prueba paquete
 
-    PaqueteUML paquete = PaqueteUML(" 1 ");
+    PaqueteUML paquete = PaqueteUML("1");
     paquete.conectar(&diagrama);
-
-
 }
-/**
-anotaciones para Kevin: quite una clase en los parametros de los metodos de clase
-porque lo que se ocupan son los nombre y ya se sabe uno porque es el de la clase que lo llama
-
-
-Puse para que los constructores se heredaran entonces hay que cambiar el diagrama
-
-quite el metodo conectar de obj generico porque no se puede heredar con diferentes parametros
-
-**/
