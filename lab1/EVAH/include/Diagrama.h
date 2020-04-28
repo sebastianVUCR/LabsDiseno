@@ -1,16 +1,24 @@
 #ifndef DIAGRAMA_H
 #define DIAGRAMA_H
 
-#include"PaqueteUML.h"
+#include"ObjetoGenericoUML.h"
+class Clase;
 
-class Diagrama: public PaqueteUML
+class Diagrama: public ObjetoGenericoUML
 {
     public:
-        Diagrama() {}
+        using ObjetoGenericoUML::ObjetoGenericoUML;
+        //Diagrama() {}
         virtual ~Diagrama() {}
 
         vector<Clase*> Getclases() { return clases; }
         void Setclases(vector<Clase*> val) { clases = val; }
+
+        //indica que el diagrama esta compuesto por otro objeto uml
+        void conectar(ObjetoGenericoUML* mi_clase)
+        {
+            cout <<"el objeto " << mi_clase->Getnombre()<<" ahora esta en el diagrama " << this->Getnombre()<<endl;
+        }
 
     protected:
 

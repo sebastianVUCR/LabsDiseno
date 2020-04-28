@@ -1,44 +1,15 @@
 # depslib dependency file v1.0
-1587963390 source:c:\users\sebastian\documents\github\labsdiseno\lab1\evah\main.cpp
+1588044401 source:c:\users\sebastian\documents\github\labsdiseno\lab1\evah\main.cpp
 	<iostream>
 	"GrafoUML.h"
 	"GrafoBPMN.h"
 	"GrafoBasico.h"
 	"EditorGrafo.h"
-	"PaqueteUML.h"
+	"ObjetoGenericoUML.h"
 	"Seleccionador.h"
 	"Clase.h"
 	"Diagrama.h"
 	"Relacion.h"
-
-1587432280 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\grafouml.h
-	"Grafo.h"
-	"TipoGrafo.h"
-
-1587432195 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\grafo.h
-	<vector>
-	"Nodo.h"
-
-1587432497 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\nodo.h
-
-1587431324 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\tipografo.h
-	"Grafo.h"
-
-1587432537 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\grafobpmn.h
-	"Grafo.h"
-	"TipoGrafo.h"
-
-1587432210 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\grafobasico.h
-	"Grafo.h"
-	"TipoGrafo.h"
-
-1587432177 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\editorgrafo.h
-	"TipoGrafo.h"
-
-1587962665 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\paqueteuml.h
-	<iostream>
-
-1587961507 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\seleccionador.h
 	"PaqueteUML.h"
 
 1587432280 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\grafouml.h
@@ -65,18 +36,25 @@
 1587432177 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\editorgrafo.h
 	"TipoGrafo.h"
 
-1587962665 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\paqueteuml.h
+1588041093 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\objetogenericouml.h
 	<iostream>
+	"ND_UML.h"
 
-1587961507 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\seleccionador.h
-	"PaqueteUML.h"
+1587432416 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\nd_uml.h
+	"Nodo.h"
 
-1587962391 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\clase.h
-	<PaqueteUML.h>
+1588037680 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\seleccionador.h
+	"ObjetoGenericoUML.h"
 
-1587963073 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\diagrama.h
-	"PaqueteUML.h"
+1588041046 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\clase.h
+	<ObjetoGenericoUML.h>
+
+1588042071 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\diagrama.h
+	"ObjetoGenericoUML.h"
 
 1587963521 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\relacion.h
 	"Clase.h"
+
+1588044683 c:\users\sebastian\documents\github\labsdiseno\lab1\evah\include\paqueteuml.h
+	"ObjetoGenericoUML.h"
 

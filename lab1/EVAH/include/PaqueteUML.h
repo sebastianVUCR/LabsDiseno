@@ -1,57 +1,33 @@
 #ifndef PAQUETEUML_H
 #define PAQUETEUML_H
 
-#include <iostream>
-using namespace std;
 
-class PaqueteUML
+#include "ObjetoGenericoUML.h"
+
+class ObjectoGenericoUML;
+
+
+class PaqueteUML : public ObjetoGenericoUML
 {
     public:
-        PaqueteUML() {}
+        //PaqueteUML() {}
+        using ObjetoGenericoUML::ObjetoGenericoUML;
+
         virtual ~PaqueteUML() {}
 
-        string Getnombre() { return nombre; }
-        void Setnombre(string val) { nombre = val; }
-        string Geticono() { return icono; }
-        void Seticono(string val) { icono = val; }
-        string Gettipo() { return tipo; }
-        void Settipo(string val) { tipo = val; }
+        vector<Diagrama*> Getdiagramas() { return diagramas; }
+        void Setdiagramas(vector<Diagrama*> val) { diagramas = val; }
 
-        void cortar()
+        //indica que un diagrama esta adentro de un paquete
+        void conectar(Diagrama* diagrama_parametro)
         {
-            cout<<""<<endl;
+            cout << "El diagrama "<<this->Getnombre()<<" ahora esta en el paquete "<<diagrama_parametro->Getnombre()<<endl;
         }
-        void pegar()
-        {
-            cout<<""<<endl;
-        }
-        void eliminar()
-        {
-            cout<<""<<endl;
-        }
-        void reducir()
-        {
-            cout<<""<<endl;
-        }
-        void dibujar()
-        {
-            cout<<""<<endl;
-        }
-
-        PaqueteUML* seleccionar()
-        {
-            return this;//??????????????????????????????
-        }
-
-
-
 
     protected:
 
     private:
-        string nombre;
-        string icono;
-        string tipo;
+        vector<Diagrama*> diagramas;
 };
 
 #endif // PAQUETEUML_H

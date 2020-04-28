@@ -34,39 +34,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="AD_BPMN.h" />
-		<Unit filename="AD_Basica.h" />
-		<Unit filename="AD_UML.h" />
-		<Unit filename="Arista.h" />
-		<Unit filename="AristaD.h" />
-		<Unit filename="AristaND.h" />
-		<Unit filename="Buscador.h" />
-		<Unit filename="CSV_Loader.h" />
-		<Unit filename="CSV_Saver.h" />
-		<Unit filename="EditorGrafo.h" />
-		<Unit filename="Especificacion.h" />
-		<Unit filename="Especificacion_O.h" />
-		<Unit filename="Especificacion_Y.h" />
-		<Unit filename="Filtro.h" />
-		<Unit filename="Grafo.h" />
-		<Unit filename="GrafoBPMN.h" />
-		<Unit filename="GrafoBasico.h" />
-		<Unit filename="GrafoLoader.h" />
-		<Unit filename="GrafoSaver.h" />
-		<Unit filename="GrafoUML.h" />
-		<Unit filename="GraphML_Loader.h" />
-		<Unit filename="GraphML_Saver.h" />
-		<Unit filename="ND_BPMN.h" />
-		<Unit filename="ND_Basico.h" />
-		<Unit filename="ND_UML.h" />
-		<Unit filename="Neo4J_Loader.h" />
-		<Unit filename="Neo4J_Saver.h" />
-		<Unit filename="Nodo.h" />
-		<Unit filename="PaqueteUML.h" />
-		<Unit filename="Relacional_Loader.h" />
-		<Unit filename="Relacional_Saver.h" />
-		<Unit filename="Seleccionador.h" />
-		<Unit filename="TipoGrafo.h" />
 		<Unit filename="include/AD_BPMN.h" />
 		<Unit filename="include/AD_Basica.h" />
 		<Unit filename="include/AD_UML.h" />
@@ -97,6 +64,7 @@
 		<Unit filename="include/Neo4J_Loader.h" />
 		<Unit filename="include/Neo4J_Saver.h" />
 		<Unit filename="include/Nodo.h" />
+		<Unit filename="include/ObjetoGenericoUML.h" />
 		<Unit filename="include/PaqueteUML.h" />
 		<Unit filename="include/Relacion.h" />
 		<Unit filename="include/Relacional_Loader.h" />
@@ -104,6 +72,8 @@
 		<Unit filename="include/Seleccionador.h" />
 		<Unit filename="include/TipoGrafo.h" />
 		<Unit filename="main.cpp" />
-		<Extensions />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

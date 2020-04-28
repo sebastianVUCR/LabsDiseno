@@ -1,7 +1,7 @@
 #ifndef SELECCIONADOR_H
 #define SELECCIONADOR_H
 
-#include "PaqueteUML.h"
+#include "ObjetoGenericoUML.h"
 
 class Seleccionador
 {
@@ -12,7 +12,7 @@ class Seleccionador
     protected:
 
     private:
-        vector<PaqueteUML> seleccionados;
+        vector<ObjetoGenericoUML> seleccionados;
         string icono;
 };
 
