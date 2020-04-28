@@ -16,7 +16,7 @@ class Relacion
     protected:
 
     private:
-        string tipo = "hola";
+        string tipo;
         pair<Clase*,Clase*>clases;
         pair<int,int>multiplicidad;
 };
