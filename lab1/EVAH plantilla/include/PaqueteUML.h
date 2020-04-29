@@ -10,7 +10,6 @@ class Diagrama;
 
 class PaqueteUML : public ObjetoGenericoUML<PaqueteUML>
 {
-
     public:
 
         using ObjetoGenericoUML::ObjetoGenericoUML;

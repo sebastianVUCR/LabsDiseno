@@ -56,7 +56,7 @@ int main()
 
 	Relacion relacion = Relacion(&clase,&clase2,1,5);
 
-	//clase.conectar<Relacion>(&relacion);
+	clase.conectar<Relacion>(&relacion);
 
 	//prueba diagrama
 
@@ -67,12 +67,12 @@ int main()
 	diagrama.reducir();
 	diagrama.cortar();
 
-    //diagrama.conectar<Clase>(&clase);
+    diagrama.conectar<Clase>(&clase);
 
 
 	//prueba paquete
 
     PaqueteUML paquete = PaqueteUML("1");
-    //paquete.conectar<Diagrama>(&diagrama);
+    paquete.conectar<ObjetoGenericoUML>(&diagrama);
 
 }
