@@ -5,7 +5,7 @@
 #include "PaqueteUML.h"
 class Clase;
 
-class Diagrama: public ObjetoGenericoUML<Diagrama>
+class Diagrama: public ObjetoGenericoUML<PaqueteUML>
 {
     public:
         using ObjetoGenericoUML::ObjetoGenericoUML;

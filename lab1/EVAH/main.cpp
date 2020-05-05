@@ -5,7 +5,6 @@ using namespace std;
 #include "GrafoBPMN.h"
 #include "GrafoBasico.h"
 #include "EditorGrafo.h"
-
 #include "ObjetoGenericoUML.h"
 #include "Seleccionador.h"
 #include "Clase.h"
@@ -49,27 +48,27 @@ int main()
 
 	Clase clase2 = Clase("Clase2");
 
-	clase.crearRelacion(&clase2,1,5);
+	clase.crearRelacion(&clase2, 1, 5);
 	clase.borrarRelacion(&clase2);
 
-	Relacion relacion = Relacion(&clase,&clase2,1,5);
+	Relacion relacion = Relacion(&clase, &clase2, 1, 5);
 
 	clase.conectar((ObjetoGenericoUML*)&relacion);
 
 	//prueba diagrama
 
-	cout<<endl;
+	cout << endl;
 
-    Diagrama diagrama = Diagrama("1");
+	Diagrama diagrama = Diagrama("1");
 	diagrama.dibujar();
 	diagrama.reducir();
 	diagrama.cortar();
 
-    diagrama.conectar(&clase);
+	diagrama.conectar(&clase);
 
 
 	//prueba paquete
 
-    PaqueteUML paquete = PaqueteUML("1");
-    paquete.conectar(&diagrama);
+	PaqueteUML paquete = PaqueteUML("1");
+	paquete.conectar(&diagrama);
 }

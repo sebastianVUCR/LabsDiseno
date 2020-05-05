@@ -12,6 +12,7 @@ class Relacion
 
         string Gettipo() { return tipo; }
         void Settipo(string val) { tipo = val; }
+        pair<Clase*, Clase*> getClases() { return clases; }
 
     protected:
 

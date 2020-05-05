@@ -2,13 +2,8 @@
 #define OBJETOGENERICOUML_H
 
 #include <iostream>
-#include <string>
 #include "ND_UML.h"
-#include <typeinfo>
-
 using namespace std;
-
-class Relacion;
 
 template <typename Self>
 class ObjetoGenericoUML: ND_UML
@@ -60,13 +55,12 @@ class ObjetoGenericoUML: ND_UML
 
         template <typename T>
         void conectar(T* conexion) {
-            if (string(typeid(Relacion*).name()).compare(typeid(conexion).name()) == 0) {
-                cout << "La clase " << conexion->getClases().first << " se unio a " << conexion->getClases().second << endl;
+            if (typeid(conexion) == typeid(Relacion)) {
+                cout << "La clase " << conexion->getClases().first << " se unio a" << conexion->getClases().second << endl;
             }
             else {
                 cout << "El objeto " << this->Getnombre() << " se unio a " << conexion->Getnombre() << endl;
             }
-            
         }
 
     protected:

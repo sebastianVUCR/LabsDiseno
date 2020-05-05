@@ -9,24 +9,24 @@ class ObjectoGenericoUML;
 
 class PaqueteUML : public ObjetoGenericoUML
 {
-    public:
-        using ObjetoGenericoUML::ObjetoGenericoUML;
+public:
+    using ObjetoGenericoUML::ObjetoGenericoUML;
 
-        virtual ~PaqueteUML() {}
+    virtual ~PaqueteUML() {}
 
-        vector<Diagrama*> getDiagramas() { return diagramas; }
-        void setDiagramas(vector<Diagrama*> val) { diagramas = val; }
+    vector<Diagrama*> getDiagramas() { return diagramas; }
+    void setDiagramas(vector<Diagrama*> val) { diagramas = val; }
 
-        //indica que un diagrama esta adentro de un paquete
-        void conectar(ObjetoGenericoUML* conexion)
-        {
-            cout << "El diagrama "<<this->Getnombre()<<" ahora esta en el paquete "<< conexion->Getnombre()<<endl;
-        }
+    //indica que un diagrama esta adentro de un paquete
+    void conectar(ObjetoGenericoUML* conexion)
+    {
+        cout << "El diagrama " << this->Getnombre() << " ahora esta en el paquete " << conexion->Getnombre() << endl;
+    }
 
-    protected:
+protected:
 
-    private:
-        vector<Diagrama*> diagramas;
+private:
+    vector<Diagrama*> diagramas;
 };
 
 #endif // PAQUETEUML_H

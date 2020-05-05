@@ -1,9 +1,12 @@
 #ifndef ARISTAD_H
 #define ARISTAD_H
 
-#include "Arista.h"
+#include "Contenido.h"
+#include "Composicion.h"
+#include "Agregacion.h"
+
 /* REPRESENTA UNA ARISTA DIRIGIDA GENÉRICA */
-class AristaD : public Arista
+class AristaD: public Contenido, public Composicion, public Agregacion
 {
 public:
 	AristaD();
