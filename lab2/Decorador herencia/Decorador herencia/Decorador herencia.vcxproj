@@ -153,12 +153,17 @@
     <ClInclude Include="AD_Basica.h" />
     <ClInclude Include="AD_BPMN.h" />
     <ClInclude Include="AD_UML.h" />
+    <ClInclude Include="Agregacion.h" />
     <ClInclude Include="Arista.h" />
     <ClInclude Include="AristaD.h" />
     <ClInclude Include="AristaND.h" />
+    <ClInclude Include="Asociacion.h" />
     <ClInclude Include="Buscador.h" />
+    <ClInclude Include="Composicion.h" />
+    <ClInclude Include="Contenido.h" />
     <ClInclude Include="CSV_Loader.h" />
     <ClInclude Include="CSV_Saver.h" />
+    <ClInclude Include="Dependencia.h" />
     <ClInclude Include="EditorGrafo.h" />
     <ClInclude Include="Especificacion.h" />
     <ClInclude Include="Especificacion_O.h" />
@@ -181,6 +186,7 @@
     <ClInclude Include="Relacional_Loader.h" />
     <ClInclude Include="Relacional_Saver.h" />
     <ClInclude Include="TipoGrafo.h" />
+    <ClInclude Include="Uso.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

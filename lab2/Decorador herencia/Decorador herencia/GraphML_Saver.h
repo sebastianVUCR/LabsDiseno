@@ -12,7 +12,7 @@ public:
 	virtual ~GraphML_Saver();
 };
 
-GraphML_Saver::GraphML_Saver(Grafo& g) : GrafoSaber(g)
+GraphML_Saver::GraphML_Saver(Grafo& g) : GrafoSaver(g)
 {
 
 }
