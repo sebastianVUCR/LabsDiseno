@@ -11,17 +11,17 @@ class Nodo;
 #include <string>
 
 /* REPRESENTA UNA ARISTA GENÉRICA */
-class Arista: public AristaD, public AristaND, public Uso, public Dependencia, public Asociacion
+class Arista
 {
 public: 
 	Arista(Nodo*, Nodo*, int, int);
 	virtual ~Arista();
 
-	void dibujar();
-	void cortar();
-	void eliminar();
-	void reducir();
-	void copiar();
+	virtual void dibujar()=0;
+	virtual void cortar() = 0;
+	virtual void eliminar() = 0;
+	virtual void reducir() = 0;
+	virtual void copiar() = 0;
 
 	std::string getNombre() { return nombre; }
 	std::string setNombre(std::string nombre) { this->nombre = nombre; }

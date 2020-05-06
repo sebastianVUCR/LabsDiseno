@@ -4,12 +4,13 @@
 
 class Composicion
 {
-	Composicion();
-	~Composicion();
+	public:
+		Composicion();
+		~Composicion();
 
-	std::string getNombre() { return nombre; }
-	std::string setNombre(std::string nombre) { this->nombre = nombre; }
+		std::string getNombre() { return nombre; }
+		std::string setNombre(std::string nombre) { this->nombre = nombre; }
 
-private:
-	std::string nombre;
+	private:
+		std::string nombre;
 };
