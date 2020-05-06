@@ -6,52 +6,54 @@
 
 using namespace std;
 
-class Arista;
-
-
 /* REPRESENTA UNA ARISTA DIRIGIDA GENÉRICA */
-class AristaD: public Arista
+class AristaD
 {
 public:
+	AristaD();
 	AristaD(string nombre);
-	virtual ~AristaD();
+	~AristaD();
 
-	virtual void dibujar();
-	virtual void cortar();
-	virtual void eliminar();
-	virtual void reducir();
-	virtual void copiar();
+	void dibujar();
+	void cortar();
+	void eliminar();
+	void reducir();
+	void copiar();
+
+	static const std::string getDIRECCION() { return "dirigida"; }
+
+private:
+	string nombre;
 };
 
-AristaD::AristaD(string nombre)
-{
-	this->setNombre(nombre);
-}
+AristaD::AristaD() : nombre{""}{}
+
+AristaD::AristaD(string nombre) : nombre{nombre}{}
 
 AristaD::~AristaD()
 {
-
+	std::cout << "Eliminando arista dirigida con nombre " << nombre << endl;
 }
 
 void AristaD::dibujar() 
 {
-	cout << "Dibujando arista dirigida con nombre " << this->getNombre();
+	std::cout << "Dibujando arista dirigida con nombre " << nombre << endl;
 }
 void AristaD::cortar() 
 {
-	cout << "Cortando arista dirigida con nombre " << this->getNombre();
+	std::cout << "Cortando arista dirigida con nombre " << nombre << endl;
 }
 void AristaD::eliminar() 
 {
-	cout << "eliminando arista dirigida con nombre " << this->getNombre();
+	std::cout << "eliminando arista dirigida con nombre " << nombre << endl;
 }
 void AristaD::reducir() 
 {
-	cout << "Reduciendo arista dirigida con nombre " << this->getNombre();
+	std::cout << "Reduciendo arista dirigida con nombre " << nombre << endl;
 }
 void AristaD::copiar() 
 {
-	cout << "Copiando arista dirigida con nombre " << this->getNombre();
+	std::cout << "Copiando arista dirigida con nombre " << nombre << endl;
 }
 
 #endif // ARISTAD_H

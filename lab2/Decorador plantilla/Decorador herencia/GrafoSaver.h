@@ -3,18 +3,18 @@
 
 #include "Grafo.h" 
 
+#include <string>
+
 /* REPRESENTA UN GUARDADOR GENÉRICO DE GRAFO */
 class GrafoSaver
 {
 public:
-	GrafoSaver(Grafo& gn);
+	GrafoSaver();
 	virtual ~GrafoSaver();
-
-private:
-	Grafo& g;
+	static const std::string getTIPO() { return "Saver"; }
 };
 
-GrafoSaver::GrafoSaver(Grafo& gn) : g(gn)
+GrafoSaver::GrafoSaver()
 {
 
 }

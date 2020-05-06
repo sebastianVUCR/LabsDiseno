@@ -6,62 +6,67 @@ using namespace std;
 
 #include "Arista.h"
 
-class Arista;
-
 /* REPRESENTA UNA ARISTA NO DIRIGIDA GENÉRICA */
-class AristaND:public Arista
+template <typename T>
+class AristaND
 {
-	public:
-		AristaND(string nombre)
-		{
-			this->setNombre(nombre);
-		}
+public:
+	AristaND();
+	AristaND(string nombre);
+	~AristaND();
+	 
+	void dibujar();
+	void cortar();
+	void eliminar();
+	void reducir();
+	void copiar();
 
-		AristaND()
-		{
-		}
+	static const std::string getDIRECCION() { return "no dirigida"; }
 
+private:
+	string nombre;
+};
 
-		virtual ~AristaND();
+template <typename T>
+AristaND<T>::AristaND(): nombre{""}{}
 
+template <typename T>
+AristaND<T>::AristaND(string nombre) : nombre{nombre} {}
 
-		virtual void dibujar();
-		virtual void cortar();
-		virtual void eliminar();
-		virtual void reducir();
-		virtual void copiar();
+template <typename T>
+AristaND<T>::~AristaND()
+{
+	std::cout << "Eliminando arista no dirigida con nombre " << nombre << endl;
+}
 
-	};
+template <typename T>
+void AristaND<T>:: dibujar()
+{
+	cout<<"Dibujando arista no dirigida con nombre " << nombre << endl;
+}
 
-	
+template <typename T>
+void AristaND<T>::cortar() 
+{
+	cout << "Cortando arista no dirigida con nombre ";
+}
 
-	AristaND::~AristaND()
-	{
+template <typename T>
+void AristaND<T>::eliminar() 
+{
+	cout << "Eliminando arista no dirigida con nombre \n";
+}
 
-	}
+template <typename T>
+void AristaND<T>::reducir()
+{
+	cout << "Reduciendo arista no dirigida con nombre ";
+}
 
+template <typename T>
+void AristaND<T>::copiar()
+{
+	cout << "Copiando arista no dirigida con nombre ";
+}
 
-	void AristaND:: dibujar() 
-	{
-		cout<<"Dibujando arista no dirigida con nombre "<<this->getNombre();
-	}
-
-	void AristaND::cortar() 
-	{
-		cout << "Cortando arista no dirigida con nombre " << this->getNombre();
-	}
-
-	void AristaND::eliminar() 
-	{
-		cout << "Eliminando arista no dirigida con nombre " << this->getNombre();
-	}
-
-	void AristaND::reducir()
-	{
-		cout << "Reduciendo arista no dirigida con nombre " << this->getNombre();
-	}
-	void AristaND::copiar()
-	{
-		cout << "Copiando arista no dirigida con nombre " << this->getNombre();
-	}
 #endif // ARISTAND_H

@@ -4,17 +4,13 @@
 #include"Arista.h"
 #include "AristaND.h"
 
-class Contenido: public AristaND
+class Contenido
 {
 	public:
-		Contenido(string nombre);
-		virtual ~Contenido() {}
+		Contenido() {}
+		~Contenido() {}
 
-		virtual void dibujar();
-		virtual void cortar();
-		virtual void eliminar();
-		virtual void reducir();
-		virtual void copiar();
+		static const std::string getTIPO() { return "contenido"; }
 
 		std::string getNombre() { return nombre; }
 		void setNombre(std::string nombre) { this->nombre = nombre; }
@@ -22,33 +18,3 @@ class Contenido: public AristaND
 	private:
 		std::string nombre;
 };
-
-
-void Contenido::dibujar()
-{
-	cout << "Dibujando arista no dirigida con nombre " << this->getNombre() << " de tipo contenido" << endl;
-}
-
-void Contenido::cortar()
-{
-	cout << "Cortando arista no dirigida con nombre " << this->getNombre() << " de tipo contenido" << endl;
-}
-
-void Contenido::eliminar()
-{
-	cout << "Eliminando arista no dirigida con nombre " << this->getNombre() << " de tipo contenido" << endl;
-}
-
-void Contenido::reducir()
-{
-	cout << "Reduciendo arista no dirigida con nombre " << this->getNombre() << " de tipo contenido" << endl;
-}
-void Contenido::copiar()
-{
-	cout << "Copiando arista no dirigida con nombre " << this->getNombre() << " de tipo contenido" << endl;
-}
-
-Contenido::Contenido(string nombre)
-{
-	this->setNombre(nombre);
-}

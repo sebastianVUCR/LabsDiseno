@@ -4,12 +4,16 @@
 #include "Grafo.h"
 #include "TipoGrafo.h"
 
+#include <string>
+
 /* REPRESENTA UN GRAFO NOTACIÓN BPMN */
-class GrafoBPMN : public TipoGrafo
+class GrafoBPMN
 {
 public:
 	GrafoBPMN();
 	~GrafoBPMN();
+
+	static const std::string getTIPO() { return "BPMN"; }
 };
 
 GrafoBPMN::GrafoBPMN()

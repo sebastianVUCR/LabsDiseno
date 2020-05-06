@@ -1,14 +1,21 @@
 #ifndef GRAFOUML_H
 #define GRAFOUML_H
 
+#include <string>
+
 #include "TipoGrafo.h"
 
 /* REPRESENTA UN GRAFO NOTACIÓN UML */
-class GrafoUML : public TipoGrafo
+class GrafoUML
 {
 public:
 	GrafoUML();
 	~GrafoUML();
+
+	const string getTIPO() { return TIPO; }
+
+private:
+	const string TIPO = "UML";
 };
 
 GrafoUML::GrafoUML()

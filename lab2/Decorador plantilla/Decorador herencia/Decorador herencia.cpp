@@ -22,104 +22,58 @@ using namespace std;
 
 int main()
 {
-	GrafoBasico g_basico;
+	Grafo<GrafoBasico> g_basico;
 	GrafoUML g_uml;
 	GrafoBPMN g_bpmn;
 
-	EditorGrafo ed_basico(g_basico);
-	EditorGrafo ed_uml(g_uml);
-	EditorGrafo ed_bpmn(g_bpmn);
+	EditorGrafo<GrafoBasico> ed_basico(Grafo<GrafoBasico>("grafoBasico1"));
+	EditorGrafo<GrafoUML> ed_uml(Grafo<GrafoUML >("grafoUML1"));
+	EditorGrafo<GrafoBPMN> ed_bpmn(Grafo<GrafoBPMN >("grafoBPMN1"));
 
-	Grafo pruebaGrafo = Grafo("prueba");
+	Grafo<GrafoUML> pruebaGrafo = Grafo<GrafoUML>("prueba");
 
-	cout << endl;
+	std::cout << endl;
 
-	
-	AristaND arista1 = AristaND("arista1");
+
+	AristaND<Agregacion> arista1 = AristaND<Agregacion>("aristaND1");
 	arista1.dibujar();
-	cout << endl;
 	arista1.copiar();
-	cout << endl;
 	arista1.cortar();
-	cout << endl;
 	arista1.eliminar();
-	cout << endl;
 	arista1.reducir();
-	cout << endl;
+	std::cout << endl;
 
-	cout << endl;
-	Uso arista1Uso = Uso(arista1);
-	arista1Uso.dibujar();
-	arista1Uso.copiar();
-	arista1Uso.cortar();
-	arista1Uso.eliminar();
-	arista1Uso.reducir();
-
-	AristaD arista2 = AristaD("arista2");
+	AristaND<Contenido> arista2 = AristaND<Contenido>("aristaND2");
+	arista2.dibujar();
+	arista2.copiar();
 	arista2.cortar();
-	cout << endl;
-	Uso arista2Uso = Uso(arista2);
-	arista2Uso.cortar();
-	cout << endl;
-	Contenido arista3Contenido = Contenido("arista3");
-	arista3Contenido.eliminar();
-	arista3Contenido.copiar();
-	arista3Contenido.dibujar();
-	arista3Contenido.reducir();
-	arista3Contenido.cortar();
+	arista2.eliminar();
+	arista2.reducir();
+	std::cout << endl;
 
-	cout << endl;
-	Agregacion arista4Agregacion = Agregacion("arista4");
-	arista4Agregacion.eliminar();
-	arista4Agregacion.copiar();
-	arista4Agregacion.dibujar();
-	arista4Agregacion.reducir();
-	arista4Agregacion.cortar();
+	Arista<AristaD, Uso> arista3 = Arista<AristaD, Uso>("arista1");
+	arista3.dibujar();
+	arista3.copiar();
+	arista3.cortar();
+	arista3.eliminar();
+	arista3.reducir();
+	std::cout << endl;
 
+	Arista<AristaND<Agregacion>, Agregacion> arista4 = Arista<AristaND<Agregacion>, Agregacion>("arista2");
+	arista4.dibujar();
+	arista4.copiar();
+	arista4.cortar();
+	arista4.eliminar();
+	arista4.reducir();
+	std::cout << endl;
 
-	cout << endl;
-	Composicion arista5Composicion = Composicion("arista5");
-	arista5Composicion.eliminar();
-	arista5Composicion.copiar();
-	arista5Composicion.dibujar();
-	arista5Composicion.reducir();
-	arista5Composicion.cortar();
-
-	cout << endl;
-	AristaD tmpArista6 = AristaD("arista6");
-	Asociacion arista6Asosiacion = Asociacion(tmpArista6);
-	arista6Asosiacion.dibujar();
-	arista6Asosiacion.copiar();
-	arista6Asosiacion.cortar();
-	arista6Asosiacion.eliminar();
-	arista6Asosiacion.reducir();
-
-	cout << endl;
-
-	//AristaD tmpArista7 = AristaD("arista7");
-	//Dependencia arista7Dependencia = Dependencia(tmpArista7);
-
-	Dependencia arista7Dependencia = Dependencia(*(new AristaND("arista7")));
-	arista7Dependencia.dibujar();
-	arista7Dependencia.copiar();
-	arista7Dependencia.cortar();
-	arista7Dependencia.eliminar();
-	arista7Dependencia.reducir();
-
-
-	AristaD arista8 = AristaD("A");
-	arista8.dibujar();
-	cout << endl;
-	arista8.copiar();
-	cout << endl;
-	arista8.cortar();
-	cout << endl;
-	arista8.eliminar();
-	cout << endl;
-	arista8.reducir();
-	cout << endl;
-
-
-
+	AristaD arista5 = AristaD("aristaD1");
+	arista5.dibujar();
+	arista5.copiar();
+	arista5.cortar();
+	arista5.eliminar();
+	arista5.reducir();
+	std::cout << endl;
+	
 	return 0;
 }

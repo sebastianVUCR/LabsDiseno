@@ -5,19 +5,22 @@
 #include "GrafoSaver.h"
 
 /* REPRESENTA UN GUARDADOR CSV DE GRAFO */
+template<typename T>
 class CSV_Saver : public GrafoSaver
 {
 public:
-	CSV_Saver(Grafo& g);
+	CSV_Saver(Grafo<T>& g);
 	virtual ~CSV_Saver();
 };
 
-CSV_Saver::CSV_Saver(Grafo& g) : GrafoSaver(g)
+template<typename T>
+CSV_Saver<T>::CSV_Saver(Grafo<T>& g) : GrafoSaver(g)
 {
 
 }
 
-CSV_Saver::~CSV_Saver()
+template<typename T>
+CSV_Saver<T>::~CSV_Saver()
 {
 
 }

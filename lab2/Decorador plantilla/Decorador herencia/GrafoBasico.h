@@ -4,12 +4,17 @@
 #include "Grafo.h"
 #include "TipoGrafo.h"
 
+#include <string>
+
 /* REPRESENTA UN GRAFO BÁSICO */
-class GrafoBasico : public TipoGrafo
+class GrafoBasico
 {
 public:
 	GrafoBasico();
 	~GrafoBasico();
+
+	const static std::string getTIPO() { return "Basico"; }
+
 };
 
 GrafoBasico::GrafoBasico()

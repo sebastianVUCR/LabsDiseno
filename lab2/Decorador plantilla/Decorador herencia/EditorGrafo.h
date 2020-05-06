@@ -1,25 +1,28 @@
 #ifndef EDITORGRAFO_H
 #define EDITORGRAFO_H
 
-#include "TipoGrafo.h"
+#include "Grafo.h"
 
 /* REPRESENTA UN EDITOR GENÉRICO DE GRAFOS */
+template<typename T>
 class EditorGrafo
 {
 public:
-	EditorGrafo(TipoGrafo& ntg);
+	EditorGrafo(Grafo<T> ntg);
 	~EditorGrafo();
 
 private:
-	TipoGrafo& tg;
+	Grafo<T> tg;
 };
 
-EditorGrafo::EditorGrafo(TipoGrafo& ntg) : tg(ntg)
+template<typename T>
+EditorGrafo<T>::EditorGrafo(Grafo<T> ntg) : tg(ntg)
 {
-
+	
 }
 
-EditorGrafo::~EditorGrafo()
+template<typename T>
+EditorGrafo<T>::~EditorGrafo()
 {
 
 }

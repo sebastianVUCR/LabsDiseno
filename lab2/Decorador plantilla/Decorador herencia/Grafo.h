@@ -8,7 +8,8 @@ using namespace std;
 #include "TipoGrafo.h"
 
 /* REPRESENTA UN GRAFO COMPLEJO GENÉRICO */
-class Grafo
+template <class T>
+class Grafo: TipoGrafo<T>
 {
 public:
 	Grafo();
@@ -17,25 +18,25 @@ public:
 
 	string getNombre() { return nombre; }
 	void setNombre(string nombre) { this->nombre = nombre; }
-	TipoGrafo* getTipo() { return &tipo; }
 
 private:
 	vector< Nodo > nodos;
 	string nombre;
-	TipoGrafo tipo;
-
 };
 
-Grafo::Grafo() {
+template <typename T>
+Grafo<T>::Grafo() {
 	cout << "Se creo un grafo\n";
 }
 
-Grafo::Grafo(string nombre): nombre{nombre}
+template <typename T>
+Grafo<T>::Grafo(string nombre) : nombre{ nombre }
 {
-	cout << "Se creo el grafo " << nombre << endl;
+	//cout << "Se creo el grafo " << nombre << " de tipo " << T.getTIPO() << endl;
 }
 
-Grafo::~Grafo()
+template <typename T>
+Grafo<T>::~Grafo()
 {
 	cout << "Se destruyo el grafo " << nombre << endl;
 }

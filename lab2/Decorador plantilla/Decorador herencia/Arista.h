@@ -1,23 +1,22 @@
 #ifndef ARISTA_H
 #define ARISTA_H
 
-class Nodo;
 #include <string>
 
-
 /* REPRESENTA UNA ARISTA GENÉRICA */
+template<typename D, typename T>
 class Arista
 {
 public: 
-	Arista() {}
-	Arista(string nombre) {}
-	virtual ~Arista() {}
+	Arista<D, T>();
+	Arista<D, T>(string nombre);
+	~Arista();
 
-	virtual void dibujar()=0;
-	virtual void cortar() = 0;
-	virtual void eliminar() = 0;
-	virtual void reducir() = 0;
-	virtual void copiar() = 0;
+	void dibujar();
+	void cortar();
+	void eliminar();
+	void reducir();
+	void copiar();
 
 	std::string getNombre() { return nombre; }
 	void setNombre(std::string nombre) { this->nombre = nombre; }
@@ -40,15 +39,53 @@ private:
 	std::pair<int, int> multiplicidad;
 	std::pair<Nodo*, Nodo*> nodos;
 };
-/*
-Arista::Arista(Nodo* inicio, Nodo* fin, int multiplicidad1, int multiplicidad2)
-{
 
+template<typename D, typename T>
+Arista<D, T>::Arista()
+{
+	std::cout << "Se creo una arista " << D::getDIRECCION() << " de tipo " << T::getTIPO() << endl;
 }
 
-Arista::~Arista()
+template<typename D, typename T>
+Arista<D, T>::Arista(string nombre) : nombre{ nombre }
 {
-
+	std::cout << "Se creo la arista " << getNombre() << " " << D::getDIRECCION() << " de tipo " << T::getTIPO() << endl;
 }
-*/
+
+template<typename D, typename T>
+Arista<D, T>::~Arista()
+{
+	std::cout << "Se borro la arista " << nombre << " " << D::getDIRECCION() << " de tipo " << T::getTIPO() << endl;
+}
+
+template<typename D, typename T>
+void Arista<D, T>::dibujar()
+{
+	std::cout << "Se dibujo la arista " << getNombre() << " " << D::getDIRECCION() << " de tipo " << T::getTIPO() << endl;
+}
+
+template<typename D, typename T>
+void Arista<D, T>::cortar()
+{
+	std::cout << "Se corto la arista " << getNombre() << " " << D::getDIRECCION() << " de tipo " << T::getTIPO() << endl;
+}
+
+template<typename D, typename T>
+void Arista<D, T>::eliminar()
+{
+	std::cout << "Se elimino la arista " << getNombre() << " " << D::getDIRECCION() << " de tipo " << T::getTIPO() << endl;
+}
+
+template<typename D, typename T>
+void Arista<D, T>::reducir()
+{
+	std::cout << "Se redujo la arista " << getNombre() << " " << D::getDIRECCION() << " de tipo " << T::getTIPO() << endl;
+}
+
+template<typename D, typename T>
+void Arista<D, T>::copiar()
+{
+	std::cout << "Se copio la arista " << getNombre() << " " << D::getDIRECCION() << " de tipo " << T::getTIPO() << endl;
+}
+
 #endif // ARISTA_H
