@@ -17,7 +17,7 @@ CSV_Saver::CSV_Saver(Grafo& g) : GrafoSaver(g)
 
 }
 
-CSV_Saver::CSV_Saver()
+CSV_Saver::~CSV_Saver()
 {
 
 }
