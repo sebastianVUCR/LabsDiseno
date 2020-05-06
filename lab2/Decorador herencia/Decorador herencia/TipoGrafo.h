@@ -3,8 +3,6 @@
 
 using namespace std;
 
-#include "Grafo.h"
-#include "GrafoUML.h"
 
 class TipoGrafo
 {
