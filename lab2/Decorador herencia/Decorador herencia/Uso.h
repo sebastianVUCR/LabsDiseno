@@ -31,19 +31,33 @@ private:
 	Arista& arista;
 };
 
-//(Shape& shape, const string& color) : shape{ shape }, color{ color }
-/*
-Uso::Uso(Arista& arista)
-{
-	this->setNombre(arista.getNombre());
-}*/
 
 void Uso::dibujar()
 {
 	arista.dibujar();
-	cout << ", esta arista es de tipo Uso"<<endl;
+	cout << ", esta arista dibujada es de tipo Uso"<<endl;
 }
-void Uso::cortar() {}
-void Uso::eliminar() {}
-void Uso::reducir() {}
-void Uso::copiar() {}
+
+void Uso::cortar() 
+{
+	arista.cortar();
+	cout << ", esta arista dibujada es de tipo Uso" << endl;
+}
+
+void Uso::eliminar()
+{
+	arista.eliminar();
+	cout << ", esta arista eliminada es de tipo Uso" << endl;
+}
+
+void Uso::reducir()
+{
+	arista.reducir();
+	cout << ", esta arista reducida es de tipo Uso" << endl;
+}
+
+void Uso::copiar()
+{
+	arista.copiar();
+	cout << ", esta arista copiada es de tipo Uso" << endl;
+}

@@ -28,11 +28,32 @@ int main()
 	EditorGrafo ed_uml(g_uml);
 	EditorGrafo ed_bpmn(g_bpmn);
 
-	AristaND arista1 = AristaND("arista1 no dirigida");
+	
+	AristaND arista1 = AristaND("arista1");
 	arista1.dibujar();
 	cout << endl;
 	Uso arista1Uso = Uso(arista1);
 	arista1Uso.dibujar();
+
+	AristaD arista2 = AristaD("arista2");
+	arista2.cortar();
+	cout << endl;
+	Uso arista2Uso = Uso(arista2);
+	arista2Uso.cortar();
+
+	Contenido arista3Contenido = Contenido("arista3");
+	arista3Contenido.eliminar();
+	arista3Contenido.copiar();
+
+	Agregacion arista4Agregacion = Agregacion("arista4");
+	arista4Agregacion.dibujar();
+	arista4Agregacion.copiar();
+
+	Composicion arista5Composicion = Composicion("arista5");
+	arista5Composicion.eliminar();
+	arista5Composicion.reducir();
+
+
 
 
 

@@ -13,7 +13,7 @@ class Arista;
 class AristaD: public Arista
 {
 public:
-	AristaD();
+	AristaD(string nombre);
 	virtual ~AristaD();
 
 	virtual void dibujar();
@@ -23,9 +23,9 @@ public:
 	virtual void copiar();
 };
 
-AristaD::AristaD()
+AristaD::AristaD(string nombre)
 {
-
+	this->setNombre(nombre);
 }
 
 AristaD::~AristaD()
@@ -35,23 +35,23 @@ AristaD::~AristaD()
 
 void AristaD::dibujar() 
 {
-	cout << "Dibujando arista dirigida con nombre " << this->getNombre() << endl;
+	cout << "Dibujando arista dirigida con nombre " << this->getNombre();
 }
 void AristaD::cortar() 
 {
-	cout << "Cortando arista dirigida con nombre " << this->getNombre() << endl;
+	cout << "Cortando arista dirigida con nombre " << this->getNombre();
 }
 void AristaD::eliminar() 
 {
-	cout << "eliminando arista dirigida con nombre " << this->getNombre() << endl;
+	cout << "eliminando arista dirigida con nombre " << this->getNombre();
 }
 void AristaD::reducir() 
 {
-	cout << "Reduciendo arista dirigida con nombre " << this->getNombre() << endl;
+	cout << "Reduciendo arista dirigida con nombre " << this->getNombre();
 }
 void AristaD::copiar() 
 {
-	cout << "Copiando arista dirigida con nombre " << this->getNombre() << endl;
+	cout << "Copiando arista dirigida con nombre " << this->getNombre();
 }
 
 #endif // ARISTAD_H

@@ -9,6 +9,7 @@ class Arista
 {
 public: 
 	Arista() {}
+	Arista(string nombre) {}
 	virtual ~Arista() {}
 
 	virtual void dibujar()=0;

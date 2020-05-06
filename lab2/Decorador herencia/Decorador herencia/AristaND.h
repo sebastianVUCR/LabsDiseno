@@ -12,7 +12,16 @@ class Arista;
 class AristaND:public Arista
 {
 	public:
-		AristaND(string nombre);
+		AristaND(string nombre)
+		{
+			this->setNombre(nombre);
+		}
+
+		AristaND()
+		{
+		}
+
+
 		virtual ~AristaND();
 
 
@@ -24,10 +33,7 @@ class AristaND:public Arista
 
 	};
 
-	AristaND::AristaND(string nombre)
-	{
-		this->setNombre(nombre);
-	}
+	
 
 	AristaND::~AristaND()
 	{
@@ -39,8 +45,23 @@ class AristaND:public Arista
 	{
 		cout<<"Dibujando arista no dirigida con nombre "<<this->getNombre();
 	}
-	void AristaND::cortar() {}
-	void AristaND::eliminar() {}
-	void AristaND::reducir() {}
-	void AristaND::copiar() {}
+
+	void AristaND::cortar() 
+	{
+		cout << "Cortando arista no dirigida con nombre " << this->getNombre();
+	}
+
+	void AristaND::eliminar() 
+	{
+		cout << "Eliminando arista no dirigida con nombre " << this->getNombre();
+	}
+
+	void AristaND::reducir()
+	{
+		cout << "Reduciendo arista no dirigida con nombre " << this->getNombre();
+	}
+	void AristaND::copiar()
+	{
+		cout << "Copiando arista no dirigida con nombre " << this->getNombre();
+	}
 #endif // ARISTAND_H
