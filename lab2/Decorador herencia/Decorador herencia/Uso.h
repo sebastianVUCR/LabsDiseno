@@ -18,10 +18,10 @@ public:
 	virtual ~Uso() {}
 
 	virtual void dibujar() override;
-	virtual void cortar();
-	virtual void eliminar();
-	virtual void reducir();
-	virtual void copiar();
+	virtual void cortar() override;
+	virtual void eliminar() override;
+	virtual void reducir() override;
+	virtual void copiar() override;
 
 	std::string getNombre() { return nombre; }
 	void setNombre(std::string nombre) { this->nombre = nombre; }

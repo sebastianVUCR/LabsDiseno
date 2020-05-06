@@ -4,6 +4,7 @@
 class Nodo;
 #include <string>
 
+
 /* REPRESENTA UNA ARISTA GENÉRICA */
 class Arista
 {
