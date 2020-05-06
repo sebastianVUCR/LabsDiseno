@@ -3,6 +3,9 @@
 
 #include "Arista.h"
 
+class Arista;
+
+
 /* REPRESENTA UNA ARISTA DIRIGIDA GENÉRICA */
 class AristaD: public Arista
 {

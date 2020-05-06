@@ -1,11 +1,18 @@
 #ifndef ARISTAND_H
 #define ARISTAND_H
 
+#include <iostream>
+using namespace std;
+
+#include "Arista.h"
+
+class Arista;
+
 /* REPRESENTA UNA ARISTA NO DIRIGIDA GENÉRICA */
 class AristaND:public Arista
 {
 	public:
-		AristaND();
+		AristaND(string nombre);
 		virtual ~AristaND();
 
 
@@ -17,9 +24,9 @@ class AristaND:public Arista
 
 	};
 
-	AristaND::AristaND()
+	AristaND::AristaND(string nombre)
 	{
-
+		this->setNombre(nombre);
 	}
 
 	AristaND::~AristaND()
@@ -28,7 +35,10 @@ class AristaND:public Arista
 	}
 
 
-	void AristaND:: dibujar() {}
+	void AristaND:: dibujar() 
+	{
+		cout<<"Dibujando arista no direccionada con nombre "<<this->getNombre() <<endl;
+	}
 	void AristaND::cortar() {}
 	void AristaND::eliminar() {}
 	void AristaND::reducir() {}
