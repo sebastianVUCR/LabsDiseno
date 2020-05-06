@@ -1,7 +1,6 @@
 #ifndef GRAFOUML_H
 #define GRAFOUML_H
 
-#include "Grafo.h"
 #include "TipoGrafo.h"
 
 /* REPRESENTA UN GRAFO NOTACIÓN UML */
@@ -14,11 +13,11 @@ public:
 
 GrafoUML::GrafoUML()
 {
-
+	cout << "Se creo un GrafoUML\n";
 }
 
 GrafoUML::~GrafoUML()
 {
-
+	cout << "Se destruyo un GrafoUML\n";
 }
 #endif // GRAFOUML_H
