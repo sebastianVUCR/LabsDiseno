@@ -5,7 +5,18 @@ using namespace std;
 #include "GrafoBPMN.h"
 #include "GrafoBasico.h"
 #include "EditorGrafo.h"
+
 #include "AristaND.h"
+#include "AristaD.h"
+
+#include "Uso.h"
+#include "Dependencia.h"
+#include "Asociacion.h"
+
+#include "Agregacion.h"
+#include "Composicion.h"
+#include "Contenido.h"
+
 
 int main()
 {
@@ -19,6 +30,12 @@ int main()
 
 	AristaND arista1 = AristaND("arista1 no dirigida");
 	arista1.dibujar();
+	cout << endl;
+	Uso arista1Uso = Uso(arista1);
+	arista1Uso.dibujar();
+
+
+
 
 	return 0;
 }

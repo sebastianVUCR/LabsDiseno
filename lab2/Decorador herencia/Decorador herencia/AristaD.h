@@ -1,7 +1,10 @@
 #ifndef ARISTAD_H
 #define ARISTAD_H
 
+#include <iostream>
 #include "Arista.h"
+
+using namespace std;
 
 class Arista;
 
@@ -30,10 +33,25 @@ AristaD::~AristaD()
 
 }
 
-void AristaD::dibujar() {}
-void AristaD::cortar() {}
-void AristaD::eliminar() {}
-void AristaD::reducir() {}
-void AristaD::copiar() {}
+void AristaD::dibujar() 
+{
+	cout << "Dibujando arista dirigida con nombre " << this->getNombre() << endl;
+}
+void AristaD::cortar() 
+{
+	cout << "Cortando arista dirigida con nombre " << this->getNombre() << endl;
+}
+void AristaD::eliminar() 
+{
+	cout << "eliminando arista dirigida con nombre " << this->getNombre() << endl;
+}
+void AristaD::reducir() 
+{
+	cout << "Reduciendo arista dirigida con nombre " << this->getNombre() << endl;
+}
+void AristaD::copiar() 
+{
+	cout << "Copiando arista dirigida con nombre " << this->getNombre() << endl;
+}
 
 #endif // ARISTAD_H

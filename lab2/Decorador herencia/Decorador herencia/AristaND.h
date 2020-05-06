@@ -37,7 +37,7 @@ class AristaND:public Arista
 
 	void AristaND:: dibujar() 
 	{
-		cout<<"Dibujando arista no direccionada con nombre "<<this->getNombre() <<endl;
+		cout<<"Dibujando arista no dirigida con nombre "<<this->getNombre();
 	}
 	void AristaND::cortar() {}
 	void AristaND::eliminar() {}
