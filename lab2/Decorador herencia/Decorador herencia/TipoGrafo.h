@@ -11,6 +11,8 @@ public:
 	~TipoGrafo();
 
 private:
+	bool binario;
+	string nombre;
 	
 };
 

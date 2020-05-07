@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "Arista.h"
+#include "Nodo.h"
 
 using namespace std;
 
@@ -21,6 +22,9 @@ public:
 	virtual void eliminar();
 	virtual void reducir();
 	virtual void copiar();
+
+private:
+	Nodo* direccion;
 };
 
 AristaD::AristaD(string nombre)

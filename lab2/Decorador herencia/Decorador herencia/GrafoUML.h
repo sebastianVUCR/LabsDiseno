@@ -9,6 +9,8 @@ class GrafoUML : public TipoGrafo
 public:
 	GrafoUML();
 	~GrafoUML();
+private:
+	const string TIPO = "UML";
 };
 
 GrafoUML::GrafoUML()
