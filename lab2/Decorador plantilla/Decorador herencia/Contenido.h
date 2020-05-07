@@ -4,11 +4,18 @@
 #include"Arista.h"
 #include "AristaND.h"
 
-class Contenido
+template<typename T>
+class Contenido: public T
 {
+	static_assert(is_base_of<AristaND, T>::value, "Template argument must be a AristaND");
+
 	public:
-		Contenido() {}
-		~Contenido() {}
+		Contenido(){}
+		Contenido(string nombre) {
+			nombre = nombre;
+			cout << "Contenido creado con nombre " << nombre << " " << T::getDIRECCION() << " " << endl;
+		}
+		~Contenido(){}
 
 		static const std::string getTIPO() { return "contenido"; }
 

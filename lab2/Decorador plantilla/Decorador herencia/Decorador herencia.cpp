@@ -22,20 +22,8 @@ using namespace std;
 
 int main()
 {
-	Grafo<GrafoBasico> g_basico;
-	GrafoUML g_uml;
-	GrafoBPMN g_bpmn;
 
-	EditorGrafo<GrafoBasico> ed_basico(Grafo<GrafoBasico>("grafoBasico1"));
-	EditorGrafo<GrafoUML> ed_uml(Grafo<GrafoUML >("grafoUML1"));
-	EditorGrafo<GrafoBPMN> ed_bpmn(Grafo<GrafoBPMN >("grafoBPMN1"));
-
-	Grafo<GrafoUML> pruebaGrafo = Grafo<GrafoUML>("prueba");
-
-	std::cout << endl;
-
-
-	AristaND<Agregacion> arista1 = AristaND<Agregacion>("aristaND1");
+	AristaD arista1 = AristaD("aristaD1");
 	arista1.dibujar();
 	arista1.copiar();
 	arista1.cortar();
@@ -43,7 +31,7 @@ int main()
 	arista1.reducir();
 	std::cout << endl;
 
-	AristaND<Contenido> arista2 = AristaND<Contenido>("aristaND2");
+	AristaND arista2 = AristaND("aristaND1");
 	arista2.dibujar();
 	arista2.copiar();
 	arista2.cortar();
@@ -51,7 +39,7 @@ int main()
 	arista2.reducir();
 	std::cout << endl;
 
-	Arista<AristaD, Uso> arista3 = Arista<AristaD, Uso>("arista1");
+	Uso<AristaD> arista3 = Uso<AristaD>("Uso1");
 	arista3.dibujar();
 	arista3.copiar();
 	arista3.cortar();
@@ -59,7 +47,7 @@ int main()
 	arista3.reducir();
 	std::cout << endl;
 
-	Arista<AristaND<Agregacion>, Agregacion> arista4 = Arista<AristaND<Agregacion>, Agregacion>("arista2");
+	Dependencia<AristaND> arista4 = Dependencia<AristaND>("Dependencia1");
 	arista4.dibujar();
 	arista4.copiar();
 	arista4.cortar();
@@ -67,13 +55,25 @@ int main()
 	arista4.reducir();
 	std::cout << endl;
 
-	AristaD arista5 = AristaD("aristaD1");
+	Asociacion<AristaD> arista5 = Asociacion<AristaD>("Asociacion1");
 	arista5.dibujar();
 	arista5.copiar();
 	arista5.cortar();
 	arista5.eliminar();
 	arista5.reducir();
 	std::cout << endl;
-	
+
+	Contenido<AristaND> arista6 = Contenido<AristaND>("Contenido1");
+	arista6.dibujar();
+	arista6.copiar();
+	arista6.cortar();
+	arista6.eliminar();
+	arista6.reducir();
+	std::cout << endl;
+
+	//Casos error
+	//Agregacion<AristaD> aristaA = Agregacion<AristaD>();
+	//Composicion<AristaD> aristaB = Composicion<AristaD>();
+	//Contenido<AristaD> aristaC = Contenido<AristaD>();
 	return 0;
 }

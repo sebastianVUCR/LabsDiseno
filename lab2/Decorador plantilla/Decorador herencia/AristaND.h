@@ -2,71 +2,64 @@
 #define ARISTAND_H
 
 #include <iostream>
-using namespace std;
-
 #include "Arista.h"
 
+using namespace std;
 /* REPRESENTA UNA ARISTA NO DIRIGIDA GENÉRICA */
-template <typename T>
-class AristaND
+class AristaND:  public Arista
 {
 public:
 	AristaND();
 	AristaND(string nombre);
 	~AristaND();
 	 
-	void dibujar();
-	void cortar();
-	void eliminar();
-	void reducir();
-	void copiar();
+	void dibujar() override;
+	void cortar() override;
+	void eliminar() override;
+	void reducir() override;
+	void copiar() override;
 
 	static const std::string getDIRECCION() { return "no dirigida"; }
 
 private:
-	string nombre;
 };
 
-template <typename T>
-AristaND<T>::AristaND(): nombre{""}{}
-
-template <typename T>
-AristaND<T>::AristaND(string nombre) : nombre{nombre} {}
-
-template <typename T>
-AristaND<T>::~AristaND()
-{
-	std::cout << "Eliminando arista no dirigida con nombre " << nombre << endl;
+AristaND::AristaND(){
+	nombre = "\"no asignado\"";
 }
 
-template <typename T>
-void AristaND<T>:: dibujar()
+AristaND::AristaND(string nombre){
+	setNombre(nombre);
+}
+
+AristaND::~AristaND()
+{
+	std::cout << "Destruyendo arista no dirigida con nombre " << nombre << endl;
+}
+
+void AristaND::dibujar()
 {
 	cout<<"Dibujando arista no dirigida con nombre " << nombre << endl;
 }
 
-template <typename T>
-void AristaND<T>::cortar() 
+void AristaND::cortar() 
 {
-	cout << "Cortando arista no dirigida con nombre ";
+	cout << "Cortando arista no dirigida con nombre " << nombre << endl;
 }
 
-template <typename T>
-void AristaND<T>::eliminar() 
+void AristaND::eliminar() 
 {
-	cout << "Eliminando arista no dirigida con nombre \n";
+	cout << "Eliminando arista no dirigida con nombre " << nombre << endl;
 }
 
-template <typename T>
-void AristaND<T>::reducir()
+void AristaND::reducir()
 {
-	cout << "Reduciendo arista no dirigida con nombre ";
+	cout << "Reduciendo arista no dirigida con nombre " << nombre << endl;
 }
 
-template <typename T>
-void AristaND<T>::copiar()
+void AristaND::copiar()
 {
-	cout << "Copiando arista no dirigida con nombre ";
+	cout << "Copiando arista no dirigida con nombre " << nombre << endl;
 }
 
 #endif // ARISTAND_H

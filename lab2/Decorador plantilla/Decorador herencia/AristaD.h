@@ -7,7 +7,7 @@
 using namespace std;
 
 /* REPRESENTA UNA ARISTA DIRIGIDA GENÉRICA */
-class AristaD
+class AristaD: public Arista
 {
 public:
 	AristaD();
@@ -23,16 +23,19 @@ public:
 	static const std::string getDIRECCION() { return "dirigida"; }
 
 private:
-	string nombre;
 };
 
-AristaD::AristaD() : nombre{""}{}
+AristaD::AristaD(){
+	setNombre("\"no asignado\"");
+}
 
-AristaD::AristaD(string nombre) : nombre{nombre}{}
+AristaD::AristaD(string nombre){
+	setNombre(nombre);
+}
 
 AristaD::~AristaD()
 {
-	std::cout << "Eliminando arista dirigida con nombre " << nombre << endl;
+	std::cout << "Destruyendo arista dirigida con nombre " << nombre << endl;
 }
 
 void AristaD::dibujar() 
@@ -45,7 +48,7 @@ void AristaD::cortar()
 }
 void AristaD::eliminar() 
 {
-	std::cout << "eliminando arista dirigida con nombre " << nombre << endl;
+	std::cout << "Eliminando arista dirigida con nombre " << nombre << endl;
 }
 void AristaD::reducir() 
 {

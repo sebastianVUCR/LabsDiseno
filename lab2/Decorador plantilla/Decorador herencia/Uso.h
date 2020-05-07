@@ -7,10 +7,17 @@
 
 using namespace std;
 
-class Uso
+template<typename T>
+class Uso: public T
 {
+	static_assert(is_base_of<Arista, T>::value, "Template argument must be a Arista");
+
 public:
 	Uso(){}
+	Uso(string nombre) { 
+		nombre = nombre;
+		cout << "Uso creado con nombre " << nombre << " " << T::getDIRECCION() << " " << endl;
+	}
 	~Uso() {}
 
 	static const std::string getTIPO() { return "uso"; }
