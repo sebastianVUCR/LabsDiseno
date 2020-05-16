@@ -25,6 +25,10 @@ using namespace std;
 #include "ConstructorJSON.h"
 #include "NodoUML.h"
 #include "ClaseUML.h"
+#include "Valor.h"
+#include "Entero.h"
+#include "Doble.h"
+#include "NodoUML.h"
 
 
 int main()

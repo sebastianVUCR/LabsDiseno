@@ -1,17 +1,39 @@
 #ifndef ENTERO_H
 #define ENTERO_H
 
-#include <Valor.h>
+#include "Valor.h"
 
 
-class Entero : public Valor
+class Entero : public Valor<int>
 {
     public:
-        Entero() {}
+        Entero() 
+        {
+            valor = 0;
+        }
+        Entero(int nuevoValor):valor(nuevoValor)
+        {
+
+        }
         virtual ~Entero() {}
 
-        int getValor() { return valor; }
-        void setValor(int val) { valor = val; }
+        int getValor() 
+        {
+            return valor; 
+        }
+        void setValor(int val) 
+        { 
+            valor = val; 
+        }
+
+        string toString()
+        {
+            return to_string(valor);
+        }
+        tipo::tipo_atributo obtTipo()
+        {
+            return tipo::tipo_atributo::Entero;
+        }
 
     protected:
 
