@@ -37,7 +37,8 @@ int main()
 	EditorGrafo ed_uml(g_uml);
 	EditorGrafo ed_bpmn(g_bpmn);
 
-
+	ConstructorXML xml = ConstructorXML();
+	ConstructorJSON json = ConstructorJSON();
 
 	/*
 	Grafo pruebaGrafo = Grafo("prueba");
