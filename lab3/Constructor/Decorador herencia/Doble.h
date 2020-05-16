@@ -1,12 +1,12 @@
 #ifndef DOBLE_H
 #define DOBLE_H
 
-#include "Valor.h"
+#include "Plantilla.h"
 
 using namespace std;
 
 
-class Doble : public Valor<double>
+class Doble : public Plantilla<double>
 {
     public:
         Doble() 

@@ -2,6 +2,14 @@
 #define NODOUML_H
 
 #include "Tipo.h"
+#include "Entero.h"
+#include "Doble.h"
+
+
+class Valor;
+
+
+
 
 using namespace std;
 
@@ -9,15 +17,37 @@ class NodoUML
 {
     public:
         NodoUML() {}
-        virtual tipo::tipo_atributo obtTipo() const = 0;
-        virtual string toString() const = 0;
+        NodoUML(string nombre, int nuevoValor)
+        {
+            valor = new Entero(nuevoValor);
+        }
+        NodoUML(string nombre, double nuevoValor)
+        {
+            valor = new Doble(nuevoValor);
+        }
+
+        string to_string()
+        {
+            return valor->toString();
+        }
+
+        Valor* obtValor()
+        {
+            return valor;
+        }
+
+        tipo::tipo_atributo obtTipo()
+        {
+            return valor->obtTipo();
+        }
+
         virtual ~NodoUML() {}
 
     protected:
 
     private:
         string nombre;
-        string idString;
+        Valor* valor;
 };
 
 #endif // NODOUML_H

@@ -1,10 +1,10 @@
 #ifndef ENTERO_H
 #define ENTERO_H
 
-#include "Valor.h"
+#include "Plantilla.h"
 
 
-class Entero : public Valor<int>
+class Entero : public Plantilla<int>
 {
     public:
         Entero() 

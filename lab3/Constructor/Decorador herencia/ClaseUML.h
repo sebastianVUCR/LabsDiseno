@@ -3,21 +3,52 @@
 
 #include "Tipo.h"
 
+#include "Entero.h"
+#include "Doble.h"
+#include "Valor.h"
+
 using namespace std;
+
+class Valor;
 
 class ClaseUML
 {
     public:
         ClaseUML() {}
-        virtual tipo::tipo_atributo obtTipo() const = 0;
-        virtual string toString() const = 0;
+        
+        ClaseUML(string nombre, int nuevoValor)
+        {
+            valor = new Entero(nuevoValor);
+        }
+        ClaseUML(string nombre, double nuevoValor)
+        {
+            valor = new Doble(nuevoValor);
+        }
+
+        string to_string()
+        {
+            return valor->toString();
+        }
+
+        Valor* obtValor()
+        {
+            return valor;
+        }
+
+        tipo::tipo_atributo obtTipo()
+        {
+            return valor->obtTipo();
+        }
+
+
+
         virtual ~ClaseUML() {}
 
     protected:
 
     private:
         string nombre;
-        string idString;
+        Valor* valor;
 };
 
 
