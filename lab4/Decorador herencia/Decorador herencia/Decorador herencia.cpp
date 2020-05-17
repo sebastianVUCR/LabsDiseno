@@ -19,9 +19,17 @@ using namespace std;
 #include "Composicion.h"
 #include "Contenido.h"
 
+#include"GrafoLoader.h"
+#include "XML_Loader.h"
+
 
 int main()
 {
+
+	GrafoLoader* loader = new XML_Loader();
+	GrafoUML salida = loader->Load("prueba.xml");
+	salida.imprimir();
+	/*
 	GrafoBasico g_basico;
 	GrafoUML g_uml;
 	GrafoBPMN g_bpmn;
@@ -120,6 +128,6 @@ int main()
 	cout << endl;
 
 
-
+	*/
 	return 0;
 }

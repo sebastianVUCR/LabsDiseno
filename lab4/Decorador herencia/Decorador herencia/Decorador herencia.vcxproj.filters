@@ -131,5 +131,16 @@
     <ClInclude Include="Contenido.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
+    <ClInclude Include="UML_loader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="XML_Loader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="prueba.xml">
+      <Filter>Archivos de origen</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

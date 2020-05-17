@@ -186,7 +186,12 @@
     <ClInclude Include="Relacional_Loader.h" />
     <ClInclude Include="Relacional_Saver.h" />
     <ClInclude Include="TipoGrafo.h" />
+    <ClInclude Include="UML_loader.h" />
     <ClInclude Include="Uso.h" />
+    <ClInclude Include="XML_Loader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="prueba.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

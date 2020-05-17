@@ -10,6 +10,7 @@ class ND_UML : public Nodo
 {
 public:
 	ND_UML();
+	ND_UML(string nombre, string tipo);
 	~ND_UML();
 
 	void dibujar();
@@ -28,6 +29,12 @@ ND_UML::ND_UML() : Nodo()
 {
 	cout << "Se creo un ND_UML llamado " << nombre << endl;
 }
+
+ND_UML::ND_UML() : Nodo(string nombre,string tipo)
+{
+	cout << "Se creo un ND_UML llamado " << nombre << endl;
+}
+
 
 ND_UML::~ND_UML()
 {

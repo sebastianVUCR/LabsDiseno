@@ -12,8 +12,8 @@ public:
 
 	string getNombre() { return nombre; }
 	void setNombre(string nombre) { this->nombre = nombre; }
-	//string getTipo() { return nombre; }
-	//void setTipo(string tipo) { this->tipo = tipo; }
+	string getTipo() { return nombre; }
+	void setTipo(string tipo) { this->tipo = tipo; }
 
 	pair<int, int> getDimensiones() { return dimensiones; }
 	void setDimensiones(pair<int, int> dimensiones) { this->dimensiones = dimensiones; }
@@ -22,7 +22,7 @@ public:
 
 private:
 	string nombre;
-	//string tipo;
+	string tipo;
 	pair<int, int> dimensiones;
 	pair<int, int> ubicacion;
 };
