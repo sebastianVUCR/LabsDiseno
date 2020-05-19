@@ -23,9 +23,6 @@ class ConstructorAbstracto
         virtual string serializarInfoArista(Arista* arista) = 0;//convierte los atributos a string y los concatena
         virtual string serializarInfoNodo(NodoUML* nodo) = 0;//convierte los atributos a string y los concatena
         ~ConstructorAbstracto() {}
-
-    protected:
-        string salida = "";
 };
 
 #endif // CONSTRUCTORABSTRACTO_H

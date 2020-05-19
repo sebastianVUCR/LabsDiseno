@@ -13,7 +13,7 @@ class ConstructorXML : public ConstructorAbstracto
     public:
         ConstructorXML(){}
 
-        virtual void exportar() {}
+        virtual void exportar() { printf("Se genero en documento XML"); }
         virtual void inicioObjeto(string nombre);
         virtual void finObjeto();
         virtual string obtenerSalida(){return salida;}
@@ -23,28 +23,29 @@ class ConstructorXML : public ConstructorAbstracto
 
         ~ConstructorXML() {}
 
-    protected:
-
+private:
+    string salida;
 };
 
 void ConstructorXML::inicioObjeto(string nombre)
 {
-    salida = "<Grafo>";
+    salida = "<Grafo><Nombre>";
+    salida = salida + nombre + "</Nombre>\n";
 }
 
 void ConstructorXML::finObjeto()
 {
-    salida = salida + "</Grafo>";
+    salida = salida + "</Grafo>\n\0";
 }
 
 string ConstructorXML::serializarInfoArista(Arista* arista)
 {
-    salida = salida + "<Salida>\n";
+    salida = salida + "<Arista>\n";
     salida = salida + "\t<Nombre>";
-    arista->getNombre() + "</Nombre>\n";
-    salida = salida + "\t\t<Tipo>" + arista->getTipo() + "</Tipo>";
-    salida = salida + "\t\t<Nodos>" + arista->getNodos().first->getNombre() + "," + arista->getNodos().second->getNombre() + "</Nodos>\n";
-    salida = salida + "</Salida>\n";
+    salida = salida + arista->getNombre() + "</Nombre>\n";
+    salida = salida + "\t\t<Tipo>" + arista->getTipo() + "</Tipo>\n";
+    //salida = salida + "\t\t<Nodos>" + arista->getNodos().first->getNombre() + "," + arista->getNodos().second->getNombre() + "</Nodos>\n";
+    salida = salida + "</Arista>\n";
     return salida;
 }
 string ConstructorXML::serializarInfoNodo(NodoUML* nodo)
