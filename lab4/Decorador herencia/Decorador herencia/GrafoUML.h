@@ -13,11 +13,13 @@ class GrafoUML : public TipoGrafo
 public:
 	GrafoUML();
 	void imprimir();
+	void insertarNodo(Nodo* nodo) { nodos.insert(nodos.end(), nodo); }
+	void insertarArista(Arista* arista) { aristas.insert(aristas.end(), arista); }
 	~GrafoUML();
 private:
 	const string TIPO = "UML";
 	vector<Arista*> aristas;
-	vector<Nodo*>nodos;
+	vector<Nodo*> nodos;
 
 };
 

@@ -1,7 +1,7 @@
 #ifndef ND_UML_H
 #define ND_UML_H
 
-using namespace std
+using namespace std;
 
 #include "Nodo.h"
 
@@ -10,7 +10,7 @@ class ND_UML : public Nodo
 {
 public:
 	ND_UML();
-	ND_UML(string nombre, string tipo);
+	ND_UML(string nombre);
 	~ND_UML();
 
 	void dibujar();
@@ -25,40 +25,41 @@ private:
 	const string TIPO = "UML";
 };
 
-ND_UML::ND_UML() : Nodo()
+ND_UML::ND_UML()
 {
-	cout << "Se creo un ND_UML llamado " << nombre << endl;
+	cout << "Se creo un ND_UML llamado " << getNombre() << endl;
 }
 
-ND_UML::ND_UML() : Nodo(string nombre,string tipo)
+ND_UML::ND_UML(string nombre)
 {
-	cout << "Se creo un ND_UML llamado " << nombre << endl;
+	setNombre(nombre);
+	cout << "Se creo un ND_UML llamado " << getNombre() << endl;
 }
 
 
 ND_UML::~ND_UML()
 {
-	cout << "Se elimino un Nodo UML llamado " << nombre << endl;
+	cout << "Se elimino un Nodo UML llamado " << getNombre() << endl;
 }
 
 void ND_UML::dibujar() {
-	cout << "Se dibujo " << nombre << endl;
+	cout << "Se dibujo " << getNombre() << endl;
 }
 
 void ND_UML::cortar() {
-	cout << "Se corto " << nombre << endl;
+	cout << "Se corto " << getNombre() << endl;
 }
 
 void ND_UML::eliminar() {
-	cout << "Se elimino " << nombre << endl;
+	cout << "Se elimino " << getNombre() << endl;
 }
 
 void ND_UML::reducir() {
-	cout << "Se redujo " << nombre << endl;
+	cout << "Se redujo " << getNombre() << endl;
 }
 
 void ND_UML::copiar() {
-	cout << "Se copio " << nombre << endl;
+	cout << "Se copio " << getNombre() << endl;
 }
 
 #endif // ND_UML_H

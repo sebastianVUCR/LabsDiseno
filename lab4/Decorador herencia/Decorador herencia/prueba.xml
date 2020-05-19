@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Nodo>
-	<nombre>casa<nombre/>
-	<tipo>clase<tipo/>
+	<nombre>casa</nombre>
+	<tipo>UML</tipo>
 </Nodo>
 <Nodo>
-	<nombre>aposento<nombre/>
-	<tipo>clase<tipo/>
+	<nombre>aposento</nombre>
+	<tipo>UML</tipo>
 </Nodo>
-<AristaND>
-	<Nodo>
-		<nombre>casa<nombre/>
-		<tipo>clase<tipo/>
-	</Nodo>
-	<Nodo>
-		<nombre>aposento<nombre/>
-		<tipo>clase<tipo/>
-	</Nodo>
-	<int>1</int>
-	<int>-1</>
-<AristaND/>
+<Arista>
+	<nombre>arista1</nombre>
+	<tipo>AristaND</tipo>
+	<peso>abc</peso>
+	<descripcion>Esta arista significa...</descripcion>
+	<multiplicidad>1,1</multiplicidad>
+	<nodos>casa,aposento</nodos>
+</Arista>
