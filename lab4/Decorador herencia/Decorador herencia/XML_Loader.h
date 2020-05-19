@@ -11,6 +11,7 @@ class XML_Loader : public GrafoLoader
 	public:
 		XML_Loader() {}
 
+		// Carga el contenido del documento XML recibido como parámetro
 		virtual GrafoUML Load(string nombreArchivo)
 		{
 
