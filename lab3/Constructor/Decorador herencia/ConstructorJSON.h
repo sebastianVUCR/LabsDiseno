@@ -47,10 +47,12 @@ string ConstructorJSON::serializarInfoArista(Arista* arista)
     salida = salida + "\tArista: " + arista->getNombre() + "{\n";
     salida = salida + "\t\tTipo: " + arista->getTipo() + '\n';
     salida = salida + "\t\tDel nodo " + arista->getNodos().first->getNombre() + " a " + arista->getNodos().second->getNombre() + "\n}\n";
+    return salida;
 }
 string ConstructorJSON::serializarInfoNodo(NodoUML* nodo)
 {
     salida = salida + "\tNodo: " + nodo->getNombre() + "\n";
+    return salida;
 }
 
 #endif // CONSTRUCTORJSON_H

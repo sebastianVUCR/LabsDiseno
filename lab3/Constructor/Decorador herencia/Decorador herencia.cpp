@@ -41,7 +41,7 @@ int main()
 	//EditorGrafo ed_uml(g_uml);
 	//EditorGrafo ed_bpmn(g_bpmn);
 
-	//ConstructorXML xml = ConstructorXML();
+	ConstructorAbstracto* xml = new ConstructorXML();
 	ConstructorAbstracto* json = new ConstructorJSON();
 
 	/*

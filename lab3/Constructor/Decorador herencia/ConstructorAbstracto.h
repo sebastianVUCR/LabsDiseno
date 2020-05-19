@@ -8,6 +8,7 @@
 
 #include "Arista.h"
 #include "Nodo.h"
+#include "NodoUML.h"
 
 using namespace std;
 
@@ -20,7 +21,7 @@ class ConstructorAbstracto
         virtual void finObjeto() = 0;
         virtual string obtenerSalida() = 0;
         virtual string serializarInfoArista(Arista* arista) = 0;//convierte los atributos a string y los concatena
-        virtual string serializarInfoNodo(Nodo* nodo) = 0;//convierte los atributos a string y los concatena
+        virtual string serializarInfoNodo(NodoUML* nodo) = 0;//convierte los atributos a string y los concatena
         ~ConstructorAbstracto() {}
 
     protected:

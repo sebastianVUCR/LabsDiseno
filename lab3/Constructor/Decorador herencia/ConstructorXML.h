@@ -11,7 +11,7 @@ using namespace std;
 class ConstructorXML : public ConstructorAbstracto
 {
     public:
-        ConstructorXML();
+        ConstructorXML(){}
 
         virtual void exportar() {}
         virtual void inicioObjeto(string nombre);
@@ -45,12 +45,14 @@ string ConstructorXML::serializarInfoArista(Arista* arista)
     salida = salida + "\t\t<Tipo>" + arista->getTipo() + "</Tipo>";
     salida = salida + "\t\t<Nodos>" + arista->getNodos().first->getNombre() + "," + arista->getNodos().second->getNombre() + "</Nodos>\n";
     salida = salida + "</Salida>\n";
+    return salida;
 }
 string ConstructorXML::serializarInfoNodo(NodoUML* nodo)
 {
     salida = salida + "<Nodo>\n";
     salida = salida + "\t<Nombre>: " + nodo->getNombre() + "</Nombre>\n";
     salida = salida + "</Nodo>\n";
+    return salida;
 }
 
 //serializacion = serializacion + "< " + nombreObjeto + ' ';
