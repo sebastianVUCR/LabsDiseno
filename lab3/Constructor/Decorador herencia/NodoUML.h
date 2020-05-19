@@ -5,11 +5,7 @@
 #include "Entero.h"
 #include "Doble.h"
 
-
 class Valor;
-
-
-
 
 using namespace std;
 
@@ -29,6 +25,11 @@ class NodoUML
         string to_string()
         {
             return valor->toString();
+        }
+        
+        string getNombre()
+        {
+            return nombre;
         }
 
         Valor* obtValor()

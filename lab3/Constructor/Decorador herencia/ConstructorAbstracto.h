@@ -6,9 +6,10 @@
 
 #include "string.h"
 
+#include "Arista.h"
+#include "Nodo.h"
+
 using namespace std;
-
-
 
 class ConstructorAbstracto
 {
@@ -18,14 +19,12 @@ class ConstructorAbstracto
         virtual void inicioObjeto(string nombre) = 0;
         virtual void finObjeto() = 0;
         virtual string obtenerSalida() = 0;
-        virtual string obtenerInfoClase() = 0;//convierte los atributos a string y los concatena
-        virtual string obtenerInfoNodo() = 0;//convierte los atributos a string y los concatena
-        virtual ~ConstructorAbstracto() {}
+        virtual string serializarInfoArista(Arista* arista) = 0;//convierte los atributos a string y los concatena
+        virtual string serializarInfoNodo(Nodo* nodo) = 0;//convierte los atributos a string y los concatena
+        ~ConstructorAbstracto() {}
 
     protected:
-
-    private:
-        string salida;
+        string salida = "";
 };
 
 #endif // CONSTRUCTORABSTRACTO_H

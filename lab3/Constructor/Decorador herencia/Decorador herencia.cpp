@@ -20,7 +20,7 @@ using namespace std;
 #include "Contenido.h"
 
 
-#include"ConstructorAbstracto.h"
+#include "ConstructorAbstracto.h"
 #include "ConstructorXML.h"
 #include "ConstructorJSON.h"
 #include "NodoUML.h"
@@ -33,16 +33,16 @@ using namespace std;
 
 int main()
 {
-	GrafoBasico g_basico;
+	//GrafoBasico g_basico;
 	GrafoUML g_uml;
-	GrafoBPMN g_bpmn;
+	//GrafoBPMN g_bpmn;
 
-	EditorGrafo ed_basico(g_basico);
-	EditorGrafo ed_uml(g_uml);
-	EditorGrafo ed_bpmn(g_bpmn);
+	//EditorGrafo ed_basico(g_basico);
+	//EditorGrafo ed_uml(g_uml);
+	//EditorGrafo ed_bpmn(g_bpmn);
 
-	ConstructorXML xml = ConstructorXML();
-	ConstructorJSON json = ConstructorJSON();
+	//ConstructorXML xml = ConstructorXML();
+	ConstructorAbstracto* json = new ConstructorJSON();
 
 	/*
 	Grafo pruebaGrafo = Grafo("prueba");
