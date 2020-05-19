@@ -44,9 +44,16 @@ class XML_Loader : public GrafoLoader
 					doc >> cadena;
 					Arista* arista;
 					if (cadena[12] == 'N')
-						arista = new AristaND("Arista desde XML");
+					{
+						AristaND tmpND = AristaND("Arista desde XML");
+						arista = &tmpND;
+					}	
 					else
-						arista = new AristaD("Arista desde XML");
+					{
+						AristaD tmpD = AristaD("Arista desde XML");
+						arista = &tmpD;
+					}
+						
 
 					t = "";
 					x = 6;

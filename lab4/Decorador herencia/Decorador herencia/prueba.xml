@@ -11,7 +11,7 @@
 	<nombre>arista1</nombre>
 	<tipo>AristaND</tipo>
 	<peso>abc</peso>
-	<descripcion>Esta arista significa...</descripcion>
+	<descripcion>AristaND</descripcion>
 	<multiplicidad>1,1</multiplicidad>
 	<nodos>casa,aposento</nodos>
 </Arista>

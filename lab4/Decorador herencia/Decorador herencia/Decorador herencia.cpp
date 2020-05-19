@@ -29,6 +29,5 @@ int main()
 	GrafoLoader* loader = new XML_Loader();
 	GrafoUML salida = loader->Load("prueba.xml");
 	salida.imprimir();
-	
 	return 0;
 }
