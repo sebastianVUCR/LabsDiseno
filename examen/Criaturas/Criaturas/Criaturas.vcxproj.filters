@@ -15,28 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\Criatura.h">
+    <ClInclude Include="Criatura.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\Doble.h">
+    <ClInclude Include="Doble.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\Entero.h">
+    <ClInclude Include="Entero.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\ObtAsg.h">
+    <ClInclude Include="ObtAsg.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\tipo.h">
+    <ClInclude Include="tipo.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\Valor.h">
+    <ClInclude Include="Valor.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\main.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="main.cpp">
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

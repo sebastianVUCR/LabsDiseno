@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Criatura.h" />
+    <ClInclude Include="Doble.h" />
+    <ClInclude Include="Entero.h" />
+    <ClInclude Include="ObtAsg.h" />
+    <ClInclude Include="tipo.h" />
+    <ClInclude Include="Valor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,17 +149,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\Criatura.h" />
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\Doble.h" />
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\Entero.h" />
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\ObtAsg.h" />
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\tipo.h" />
-    <ClInclude Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\Valor.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\2020\Diseño\examen\entidades_mutantes\main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
