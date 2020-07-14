@@ -22,7 +22,7 @@ private:
 
 template < typename T >
 Lista<T>::Lista()
-{
+{	
 }
 
 template < typename T >

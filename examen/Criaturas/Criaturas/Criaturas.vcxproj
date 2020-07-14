@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Booleano.h" />
     <ClInclude Include="Enjambre.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Criatura.h" />
@@ -27,6 +28,7 @@
     <ClInclude Include="Especie.h" />
     <ClInclude Include="Hilera.h" />
     <ClInclude Include="ObtAsg.h" />
+    <ClInclude Include="Pinguino.h" />
     <ClInclude Include="Poltergeist.h" />
     <ClInclude Include="Poro.h" />
     <ClInclude Include="Puntero.h" />

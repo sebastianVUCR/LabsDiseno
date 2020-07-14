@@ -35,6 +35,7 @@ public:
 	void asgEdad(int ne);
 	void asgEnergia(double ne);
 	void combinarCriatura(Criatura* criaturas);
+	void cambiarEspecie(Especie* especie);
 
 	/* VECTOR DE ATRIBUTOS */
 	void obtAtributos(vector< pair< string, Valor* > >& vectorValores);
@@ -99,14 +100,11 @@ string Criatura::obtEspecie() const {
 }
 
 string Criatura::obtVector() const {
-	return static_cast<Vector<Criatura*>*>(atributos.at("vector"))->toString();
+	return static_cast<Vector<Criatura>*>(atributos.at("vector"))->toString();
 }
 
 string Criatura::toString(){
-	string hilera = "(" + obtEspecie() + ", ";
-	hilera += obtEdad() + ", ";
-	hilera += obtEnergia();
-	hilera += ")";
+	string hilera = "(" + obtEspecie() + ")";
 	return hilera;
 }
 
@@ -118,6 +116,10 @@ void Criatura::asgEdad(int ne)
 void Criatura::asgEnergia(double ne)
 {
 	static_cast<Doble*>(atributos.at("energia"))->asg(ne);
+}
+
+void Criatura::cambiarEspecie(Especie* especie) {
+	this->especie = especie;
 }
 
 void Criatura::obtAtributos(vector< pair< string, Valor* > >& vectorValores)

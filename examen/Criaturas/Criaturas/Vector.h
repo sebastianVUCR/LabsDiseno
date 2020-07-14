@@ -68,7 +68,7 @@ string Vector<T>::toString() const
 	string hilera = "[";
 	for (size_t i = 0; i < valor.size(); i++)
 	{
-		//hilera += valor[i].toString() + ", ";
+		hilera += static_cast<T>(valor[i]).toString();
 	}
 	hilera += "]";
 	return hilera;

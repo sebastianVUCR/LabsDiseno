@@ -1,7 +1,2 @@
 ﻿  main.cpp
-C:\Users\Kevin Obando\Desktop\Proyectos\DS\LabsDiseno.git\trunk\examen\Criaturas\Criaturas\Criatura.h(108,22): warning C4244: 'argumento': conversión de 'double' a '_Elem'; posible pérdida de datos
-          with
-          [
-              _Elem=char
-          ]
   Criaturas.vcxproj -> C:\Users\Kevin Obando\Desktop\Proyectos\DS\LabsDiseno.git\trunk\examen\Criaturas\Debug\Criaturas.exe

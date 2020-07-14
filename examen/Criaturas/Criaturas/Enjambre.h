@@ -5,7 +5,7 @@
 using namespace std;
 
 class Enjambre {
-private:
+public:
 	Enjambre();
 	Enjambre(Criatura* c);
 	~Enjambre();
@@ -13,24 +13,48 @@ private:
 	void reproducirse();
 	string getEspecie() const;
 	void agregarCreatura(Criatura* c);
+	string toString();
 
-public:
+private:
 	vector<Criatura*> creaturas;
 
-	const string TIPO;
+	string tipo;
 };
 
-Enjambre::Enjambre(Criatura* c) : TIPO(c->obtEspecie()) {
+Enjambre::Enjambre(){
+	tipo = "Poro";
+	creaturas = vector<Criatura*>();
+}
+
+Enjambre::Enjambre(Criatura* c){
+	tipo = c->obtEspecie();
 	creaturas = vector<Criatura*>();
 	creaturas.insert(creaturas.end(), c);
 }
 
+Enjambre::~Enjambre() {}
+
 void Enjambre::reproducirse() {
-	for (int x = 0; x < creaturas.size(); ++x) {
+	int size = creaturas.size();
+	for (int x = 0; x < size; ++x) {
 		creaturas.push_back(creaturas[x]->reproducirse());
 	}
 }
 
 string Enjambre::getEspecie() const {
-	return TIPO;
+	return tipo;
+}
+
+void Enjambre::agregarCreatura(Criatura* c) {
+	creaturas.push_back(c);
+}
+
+string Enjambre::toString() {
+	string hilera = "[";
+	for (size_t i = 0; i < creaturas.size(); i++)
+	{
+		hilera += "(" + creaturas[i]->obtEspecie() + ")";
+	}
+	hilera += "]";
+	return hilera;
 }

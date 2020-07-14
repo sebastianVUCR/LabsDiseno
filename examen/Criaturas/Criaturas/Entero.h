@@ -20,7 +20,7 @@ private:
 	int valor;
 };
 
-Entero::Entero()
+Entero::Entero(): valor(7)
 {
 }
 
