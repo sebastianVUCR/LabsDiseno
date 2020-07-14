@@ -19,12 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Enjambre.h" />
+    <ClInclude Include="Lista.h" />
     <ClInclude Include="Criatura.h" />
     <ClInclude Include="Doble.h" />
     <ClInclude Include="Entero.h" />
+    <ClInclude Include="Especie.h" />
+    <ClInclude Include="Hilera.h" />
     <ClInclude Include="ObtAsg.h" />
+    <ClInclude Include="Poltergeist.h" />
+    <ClInclude Include="Poro.h" />
+    <ClInclude Include="Puntero.h" />
     <ClInclude Include="tipo.h" />
     <ClInclude Include="Valor.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
